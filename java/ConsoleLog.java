@@ -1,0 +1,1 @@
+Console.log("Wanna join the dev team? Email me at BlackHexFury896@protonmail.com for more info!");
