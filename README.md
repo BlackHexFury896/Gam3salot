@@ -18,11 +18,11 @@ This is the homescreen of the website. Put games and other files on another page
 
 ### ← style.css
 
-This is not really used because due to technical issues, I decided to put all CSS Style Rulings within each individual file. Just copy
+Put CSS style rulings in this file to make the website look prettier.
 
 ### ← script.js
 
-It's a ghost town in this file. All that is in it are logs for debugging and time/date
+It's a ghost town in this file. All that is in it are logs for debugging.
 
 ### ← assets
 
