@@ -1,223 +1,11 @@
+<!DOCTYPE html>
 <html>
   <title>Gam3salot - Twitch Tetris</title>
   <link
     rel="icon"
     href="https://cdn.glitch.com/750dae56-d9aa-4c5a-8c14-dfa60229e50c%2F750dae56-d9aa-4c5a-8c14-dfa60229e50c_2Frandom_logo_15ebdfd948936f061a23eb337bebd56e.png?v=1601992034422"
   />
-  <style>
-         @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-        body {
-            font-family: "Lato", sans-serif;
-            background-color: #333;
-            padding-bottom: 0px;
-            margin: 0;
-
-          }
-
-        .navbar-icon-top .navbar-nav .nav-link > .fa {
-          position: relative;
-          width: 36px;
-          font-size: 24px;
-        }
-
-        .navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
-          font-size: 0.75rem;
-          position: absolute;
-          right: 0;
-          font-family: sans-serif;
-        }
-
-        .navbar-icon-top .navbar-nav .nav-link > .fa {
-          top: 3px;
-          line-height: 12px;
-        }
-
-        .navbar-icon-top .navbar-nav .nav-link > .fa > .badge {
-          top: -10px;
-        }
-
-        @media (min-width: 576px) {
-          .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link {
-            text-align: center;
-            display: table-cell;
-            height: 70px;
-            vertical-align: middle;
-            padding-top: 0;
-            padding-bottom: 0;
-          }
-
-          .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa {
-            display: block;
-            width: 48px;
-            margin: 2px auto 4px auto;
-            top: 0;
-            line-height: 24px;
-          }
-
-          .navbar-icon-top.navbar-expand-sm .navbar-nav .nav-link > .fa > .badge {
-            top: -7px;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link {
-            text-align: center;
-            display: table-cell;
-            height: 70px;
-            vertical-align: middle;
-            padding-top: 0;
-            padding-bottom: 0;
-          }
-
-          .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa {
-            display: block;
-            width: 48px;
-            margin: 2px auto 4px auto;
-            top: 0;
-            line-height: 24px;
-          }
-
-          .navbar-icon-top.navbar-expand-md .navbar-nav .nav-link > .fa > .badge {
-            top: -7px;
-          }
-        }
-
-        @media (min-width: 992px) {
-          .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link {
-            text-align: center;
-            display: table-cell;
-            height: 70px;
-            vertical-align: middle;
-            padding-top: 0;
-            padding-bottom: 0;
-          }
-
-          .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa {
-            display: block;
-            width: 48px;
-            margin: 2px auto 4px auto;
-            top: 0;
-            line-height: 24px;
-          }
-
-          .navbar-icon-top.navbar-expand-lg .navbar-nav .nav-link > .fa > .badge {
-            top: -7px;
-          }
-        }
-
-        @media (min-width: 1200px) {
-          .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link {
-            text-align: center;
-            display: table-cell;
-            height: 70px;
-            vertical-align: middle;
-            padding-top: 0;
-            padding-bottom: 0;
-          }
-
-          .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa {
-            display: block;
-            width: 48px;
-            margin: 2px auto 4px auto;
-            top: 0;
-            line-height: 24px;
-          }
-
-          .navbar-icon-top.navbar-expand-xl .navbar-nav .nav-link > .fa > .badge {
-            top: -7px;
-          }
-
-            .sidenav {
-                height: auto;
-                width: 175px;
-                position: relative;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                background-color: #111;
-                overflow-x: hidden;
-                padding-top: 20px;
-                min-height: 0;
-                bottom: 45px;
-                float: left;
-              }
-
-              .sidenav a {
-                padding: 6px 8px 6px 16px;
-                text-decoration: none;
-                font-size: 18px;
-                color: #818181;
-                display: block;
-              }
-
-              .sidenav a:hover {
-                color: #f1f1f1;
-              }
-              .sidenav a.active {
-                background-color: #4CAF50;
-                color: white;
-              }
-
-              .main {
-                margin-left: 160px; /* Same as the width of the sidenav */
-                font-size: 28px; /* Increased text to enable scrolling */
-                padding: 0px 10px;
-                min-height: 0
-                bottom: 45px
-              }
-
-              @media screen and (max-height: 450px) {
-                .sidenav {
-                  padding-top: 15px;
-                }
-                .sidenav a {
-                  font-size: 18px;
-                }
-              }
-          /* Dropdown Button */
-    .dropbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px;
-      font-size: 16px;
-      border: none;
-    }
-
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {background-color: #ddd;}
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {display: block;}
-
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {background-color: #3e8e41;}
-          }
-        }
-  </style>
+  <link rel="stylesheet" href="/style.css" />
   <body>
     <link
       href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -227,7 +15,15 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
-
+<script>
+      var width = window.innerWidth;
+      if (window.innerWidth < 1000) {
+        window.location.replace("https://gam3salot.glitch.me/mindex.html");
+        console.log(width);
+      } else {
+        console.log("Window width is: " + window.innerWidth + "px");
+      }
+    </script>
     <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="https://gam3salot.glitch.me/index.html"
         >Gam3salot</a
@@ -263,21 +59,13 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://discord.com/">
-              <i class="fa fa-globe">
+              <i class="fa fa-gamepad">
                 <span class="badge badge-danger"></span>
               </i>
               Discord
             </a>
           </li>
         </ul>
-        <div class="dropdown">
-          <button class="dropbtn">Other Links</button>
-          <div class="dropdown-content">
-            <a href="https://youtube.com/">YouTube</a>
-            <a href="https://theuselessweb.com/">The Useless Web</a>
-            <a href="https://soundcloud.com/">SoundCloud</a>
-          </div>
-        </div>
         <!--<li class="nav-item">
         <a class="nav-link disabled" href="#">
           <i class="fa fa-envelope-o">
@@ -355,19 +143,9 @@
       <a href="mcraft.html">Minecraft</a>
       <a href="cookie.html">Cookie Clicker</a>
       <a href="tetris.html">Twitch Tetris</a>
+      <a href="2048.html">2048</a>
+      <a href="pacman.html">Pac-Man</a>
       <a href="memes.html">Daily Memes</a>
-      <a href="gunmayhem2.html">Gun Mayhem 2</a>
-      <a href="10morebullets.html">10 More Bullets</a>
-      <a href="btd5.html">Bloons Tower Defense 5</a>
-      <a href="giveuprobot.html">Give Up Robot</a>
-      <a href="flight.html">Flight</a>
-      <a href="catninja.html">Cat Ninja</a>
-      <a href="smashflash.html">Super Smash Flash</a>
-      <a href="digdug.html">Dig Dug</a>
-      <a href="bindingofissac.html">The Binding Of Issac</a>
-      <a href="megaminer.html">Mega Miner</a>
-      <a href="ageofwar2.html">Age of War 2</a>
-      <a href="tron.html">Tron</a>
     </div>
     <div>
       <div>
@@ -375,9 +153,15 @@
         <p>
           <embed
             src="https://www.rossipotti.de/ausgabe28/tetris/index.html"
-            width="710"
-            height="320"
+            width="820"
+            height="600"
           />
+          <div class="message">
+            <p>
+              Here is the link to the site if you want it in fullscreen:
+            </p>
+            <a href="https://www.rossipotti.de/ausgabe28/tetris/index.html">Twitch Tetris</a>
+        </div>
         </p>
       </div>
     </div>

@@ -30,8 +30,8 @@ Drag in `assets`, like logos or shockwave flash files into here to upload flash 
 
 ### ← .env
 
-If you would like to see or use some of these files, you can contact me at BlackHexFury896@protonmail.com. Make sure you mention why you are emailing or I may just delete the email.
+If you would like to see or use some of these keys or files you can contact me at BlackHexFury896@protonmail.com. Make sure you mention why you are emailing or I may just delete the email.
 
-## Made by [Glitch](https://glitch.com/)
+## Made with [Glitch](https://glitch.com/)
 
 \ ゜ o ゜)ノ
